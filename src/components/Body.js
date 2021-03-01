@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Search from './Search';
 import API from "../utils/API";
 
 class Body extends Component {
@@ -7,9 +8,9 @@ class Body extends Component {
         result:[],
         search: ""
       };
-
+  // When this component mounts, search for the movie "The Matrix"
     componentDidMount() {
-        this.searchEmployee(3);
+        this.searchEmployee(50);
         
     }
 
@@ -19,10 +20,30 @@ class Body extends Component {
             .catch(err => console.log(err));        
        };
 
-    render() {
+       handleInputChange = event => {
+        const value = event.target.value;
+        const name = event.target.name;
+        this.setState({ search: value });
+        
+        console.log(this.state.search);
+    }
+// When the form is submitted, search the OMDB API for the value of `this.state.search`
+    handleFormSubmit = event => {
+        event.preventDefault();
+        this.searchEmployee(this.state.search);
+      };
+
+     render() {
                 
         return (        
             <div className="container">
+
+                <Search
+                    value={this.state.search}
+                    handleInputChange={this.handleInputChange}
+                    handleFormSubmit={this.handleFormSubmit}
+                />
+                
                 <div className="row">    
                {this.state.result.map(user =>
                     <div className="col-4">
