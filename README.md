@@ -1,4 +1,4 @@
-# employee-directory
+# Employee-Directory
 
 ## Table of Contents
 <p align="center">
@@ -32,7 +32,7 @@ An employee or manager would benefit greatly from being able to view non-sensiti
 ![Screenshot 2021-03-04 173433](https://user-images.githubusercontent.com/29310963/110054450-f72f8480-7d0f-11eb-8d0c-3b57ce9b86fa.png)
 
 ## Repository and Live Site
-Repository: https://github.com/rattanakleng/budget-tracker </br>
+Repository: https://github.com/rattanakleng/employee-directory </br>
 Live Page: https://rattanakleng.github.io/employee-directory/
 
 
