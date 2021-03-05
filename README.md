@@ -29,7 +29,7 @@ As a user, I want to be able to view my entire employee directory at once so tha
 An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name.
 
 ## Live-Page
-
+![Screenshot 2021-03-04 173433](https://user-images.githubusercontent.com/29310963/110054450-f72f8480-7d0f-11eb-8d0c-3b57ce9b86fa.png)
 
 ## Repository and Live Site
 Repository: https://github.com/rattanakleng/budget-tracker </br>
