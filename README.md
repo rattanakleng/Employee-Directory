@@ -22,7 +22,7 @@
 - [Repository and Live Site](#repository-and-live-site)
 
 ## Description
-The app lets user display all employees, sort list ascendence or deccendent, and search for an employee by first name. The app was built with React, and fetch data [Random User API](https://randomuser.me/). 
+The app lets the user display all employees, sort list ascendence or descendent, and search for an employee by the first name. The app was built with React, and fetch data [Random User API](https://randomuser.me/). 
 
 ## User Story
 As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
