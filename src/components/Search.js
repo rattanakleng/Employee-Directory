@@ -11,8 +11,13 @@ const Search = (props) => {
                     className="form-control"
                     id="search"
                     aria-describedby="search keyword"
-                     />                     
-                </div>      
+                    onSubmit={props.handleFormSubmit}
+                    />                     
+                </div>
+                  
+            <button onClick={props.sortAscending} className="btn btn-primary mb-5 mr-5">Sort A-Z</button>
+
+            <button onClick={props.sortDescending} className="btn btn-primary mb-5">Sort Z-A</button>
 
         </form>
     )

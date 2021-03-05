@@ -24,8 +24,28 @@ class Body extends Component {
         const value = event.target.value;
         this.setState({ search: value });    
     };
+
+    sortAscending = event => {
+        event.preventDefault();
+        const sortEmp = this.state.result.sort((a, b) => a.name.first > b.name.first ? 1 : -1)
+
+        this.setState({
+            result: sortEmp
+        })
+    }
     
-    render() {   
+    sortDescending = event => {
+        event.preventDefault();
+        const sortEmp = this.state.result.sort((a, b) => a.name.first < b.name.first ? 1 : -1)
+
+        this.setState({
+            result: sortEmp            
+        })
+
+
+    }
+
+    render() {  
         
     return (        
         <div className="container">
@@ -33,9 +53,9 @@ class Body extends Component {
             <Search
                 value={this.state.search}
                 handleInputChange={this.handleInputChange}
-                handleFormSubmit={this.handleFormSubmit}
-            />
-            
+                sortAscending={this.sortAscending}
+                sortDescending={this.sortDescending}
+            />            
             
             <div className="row">    
                 {this.state.result.filter((val) => {
@@ -46,7 +66,7 @@ class Body extends Component {
                     }
             }).map(employee =>
                 <div className="col-4">
-                    <div className="card" style={{ width: "18rem" }}>
+                    <div className="card mb-4" style={{ width: "18rem" }}>
 
                         <img src={employee.picture.large} className="card-img-top" alt="Profile img" />
 
